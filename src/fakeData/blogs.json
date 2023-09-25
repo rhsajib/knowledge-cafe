@@ -1,0 +1,70 @@
+[
+    {
+        "id": "34232",
+        "user" : {
+            "id": "243",
+            "name": "Jimmy Carter",
+            "username": "JimmyC",
+            "img":"https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+        },
+        "title": "Become a self-taught programmer like Rashed.",
+        "description": "How to be a president",
+        "read": 5,
+        "img": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "modified": "2009-03-17T03:53:36Z",
+        "published": "March 14",
+        "tags": ["president", "usa", "john", "quincy", "adams"]
+    },
+
+    {
+        "id": "3423232",
+        "user" : {
+            "id": "23143",
+            "name": "Bill Clinton",
+            "username": "BillC",
+            "img": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+        },
+        "title": "How to be an expert in React Java Script.",
+        "description": "How to be a president",
+        "read": 7,
+        "img": "https://images.pexels.com/photos/5380655/pexels-photo-5380655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "modified": "2009-03-17T03:53:36Z",
+        "published": "December 19",
+        "tags": ["president", "usa", "john", "quincy", "adams"]
+    },
+
+    {
+        "id": "4232",
+        "user" : {
+            "id": "9243",
+            "name": "Jimmy Carter",
+            "username": "JimmyC",
+            "img":"https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+        },
+        "title": "Become a self-taught programmer like Rashed.",
+        "description": "How to be a president",
+        "read": 9,
+        "img": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "modified": "2009-03-17T03:53:36Z",
+        "published": "March 14",
+        "tags": ["president", "usa", "john", "quincy", "adams"]
+    },
+
+    {
+        "id": "5232",
+        "user" : {
+            "id": "143",
+            "name": "Bill Clinton",
+            "username": "BillC",
+            "img": "https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+        },
+        "title": "How to be an expert in React Java Script.",
+        "description": "How to be a president",
+        "read": 7,
+        "img": "https://images.pexels.com/photos/5380655/pexels-photo-5380655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "modified": "2009-03-17T03:53:36Z",
+        "published": "December 19",
+        "tags": ["president", "usa", "john", "quincy", "adams"]
+    }
+
+]

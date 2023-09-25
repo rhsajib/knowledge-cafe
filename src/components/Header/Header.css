@@ -1,0 +1,32 @@
+.header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+    align-items: center;
+    border-bottom: 1px solid rgb(204, 201, 201); 
+}
+
+nav.header div {
+    display: flex; /* Add this to make the links flex items */
+    align-items: center; /* Vertically align the links */
+    
+}
+
+nav.header img{
+    height: 40px;
+    width: 40px;
+    border: 1px solid grey;
+    border-radius: 100%;
+}
+
+nav.header a{
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+}
+
+nav.header a:hover{
+    color: grey;
+}

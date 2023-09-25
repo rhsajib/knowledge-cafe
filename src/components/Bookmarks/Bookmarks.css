@@ -1,0 +1,20 @@
+.bookmark-container{
+    margin-left: 10px;
+}
+
+
+.spent-time{
+    background: rgb(240, 189, 240);
+    border: 1px solid rgb(94, 36, 94);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bookmarked{
+    background: rgb(125, 243, 243);
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    margin-top: 20px;
+}
