@@ -24,7 +24,7 @@
   }
 
 
-.blog button:active,
+
 .blog button:focus {
     /* Add your hover or focus styles here */
     text-decoration: none; /* Remove underline on hover/focus */

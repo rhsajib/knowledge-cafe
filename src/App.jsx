@@ -1,5 +1,5 @@
 import './App.css'
-import Body from './components/Body/Body'
+import Blogs from './components/Blogs/Blogs'
 import Header from './components/Header/Header'
 
 function App() {
@@ -7,9 +7,9 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <Body></Body>
+      <Blogs></Blogs>
     </div>
   )
 }
 
-export default App
+export default App;

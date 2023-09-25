@@ -1,16 +1,18 @@
 const getItemFromDb = item => {
     let itemData = {};
     const storedItem = localStorage.getItem(item);
+    // console.log(storedItem)
     if (storedItem) {
-        itemData = JSON.stringify(storedItem);
+        itemData = JSON.parse(storedItem);
+       
     }
     return itemData;
 }
 
 
 const addIdToDbItem = (item, id) => {
-    const itemData = addIdToDbItem(item);
-
+    
+    let itemData = getItemFromDb(item);
     const quantity = itemData[id];
 
     if (!quantity) {
