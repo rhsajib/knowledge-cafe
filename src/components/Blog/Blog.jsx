@@ -22,12 +22,13 @@ const Blog = (props) => {
                 
                 <div className='blog-bookmark'>
                     <text>{read} mins read</text>
-                    <button><img src="bookmark.svg" alt="" /></button>
+                    <button onClick={() => {props.handleaddToBookmark(props.blog)}}><img src="bookmark.svg" alt="" /></button>
                 </div>               
             </div>
             <h2>{title}</h2>
 
             {
+                // tags.map(tag => <span><a href="">#{tag}  </a></span>)
                 tags.map(tag => <text>#{tag}  </text>)
             }
 

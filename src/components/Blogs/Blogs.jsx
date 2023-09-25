@@ -11,12 +11,22 @@ const Blogs = () => {
         .then(res => res.json())
         .then(data => setBlogs(data))
     }, [])
+
+    useEffect( () => {
+        const storedBookmark = get
+    }, [])
+    
+    const handleaddToBookmark = (blog) => {
+        
+    }
+
     return (
         <div className='blogs-container'>
             {
                 blogs.map(blog => <Blog 
                     blog={blog}
                     key = {blog.id}
+                    handleaddToBookmark = {handleaddToBookmark}
                     ></Blog>)
             }
         </div>
