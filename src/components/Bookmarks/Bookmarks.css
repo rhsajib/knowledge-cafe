@@ -4,14 +4,17 @@
 
 
 .spent-time{
-    background: rgb(240, 189, 240);
-    border: 1px solid rgb(94, 36, 94);
+    background: rgb(172, 210, 235);
+    border: 1px solid rgb(122, 157, 180);
     border-radius: 8px;
     text-align: center;
+    position: sticky;
+    top: 70px;
+
 }
 
 .bookmarked{
-    background: rgb(125, 243, 243);
+    background: rgb(197, 235, 235);
     border-radius: 8px;
     padding-left: 20px;
     padding-right: 20px;
