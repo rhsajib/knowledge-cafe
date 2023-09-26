@@ -61,6 +61,26 @@ const Blogs = () => {
     }
 
 
+    
+    // handle read time
+    const [spentTime, setSpentTime] = useState(0)
+    
+    // this will handle read time after reload the page
+    useEffect( () => {
+        const storedReadTime = getReadTimeFromDb('blog-read-time')
+        setSpentTime(storedReadTime)
+    }, [])
+    
+
+
+    // this will handle read time after clicking to mark as read button
+    const handleReadTime = blog => {
+
+        addReadTimeToDb('blog-read-time', blog.read)
+        const storedReadTime = getReadTimeFromDb('blog-read-time')
+        setSpentTime(storedReadTime)
+    }
+
 
 
     
@@ -73,14 +93,14 @@ const Blogs = () => {
                         blog = {blog}
                         key = {blog.id}
                         handleaddToBookmark = {handleaddToBookmark}
-                        // handleReadTime = {handleReadTime}
+                        handleReadTime = {handleReadTime}
                         ></Blog>)
                 }
             </div>
             <Bookmarks
                 key = {1}
                 bookmarks = {bookmarks}
-                // spentTime = {spentTime}
+                spentTime = {spentTime}
             ></Bookmarks>
         </div>
         
