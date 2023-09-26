@@ -11,7 +11,7 @@ const Bookmarks = (props) => {
     return (
         <div className='bookmark-container'>
             <div className='spent-time'>
-                <h4> Spent time on read :    mins </h4>
+                <h4> Spent time on read : {props.spentTime} mins </h4>
             </div>
             <div className='bookmarked'>
                 <h4>Bookmarked Blogs: {bookmarks.length}</h4>

@@ -41,10 +41,34 @@ const deleteItemFromDb = item => {
 }
 
 
+// functions for read time
+
+const getReadTimeFromDb = item => {
+    return (localStorage.getItem(item) | 0);
+}
+
+
+
+const addReadTimeToDb = (item, time) => {
+    let readTime = getReadTimeFromDb(item);
+    localStorage.setItem(item, readTime + time);
+}
+
+
+
+
+
+
+
+
+
+
 
 export{
     getItemFromDb,
     addIdToDbItem,
     removeIdFromDbItem,
-    deleteItemFromDb
+    deleteItemFromDb,
+    getReadTimeFromDb,
+    addReadTimeToDb
 }

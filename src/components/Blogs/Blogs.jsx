@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Blogs.css'
 import Blog from '../Blog/Blog';
 import Bookmarks from '../Bookmarks/Bookmarks';
-import { addIdToDbItem, getItemFromDb } from '../../utilities/fakedb';
+import { addIdToDbItem, getItemFromDb, addReadTimeToDb, getReadTimeFromDb } from '../../utilities/fakedb';
 
 
 
@@ -18,47 +18,50 @@ const Blogs = () => {
     }, [])
     
     
-    const storedBookmarksIdToBookmarks = storedBookmarksId => {
-        const savedBookmarks = [];
+    const storedIdToBlog = (storedId, blogs) => {
+        const savedBlogs = [];
 
-        if (storedBookmarksId) {
+        if (storedId) {
             
-            for (const id in storedBookmarksId){
+            for (const id in storedId){
                 const requiredBlog = blogs.find(blog => blog.id == id)
 
                 if (requiredBlog) {
-                    savedBookmarks.push(requiredBlog)
+                    savedBlogs.push(requiredBlog)
                 }
             }
         }
-        return savedBookmarks
+        return savedBlogs
     }
 
 
 
-
+    // handle bookmarks
     const [bookmarks, setBookmarks] = useState([])
 
     // this will handle bookmarks after reload the page
     useEffect( () => {
         const dbItem = 'blog-bookmarks'
-        const storedBookmarksId = getItemFromDb(dbItem)
+        const storedId = getItemFromDb(dbItem)
         
-        const savedBookmarks = storedBookmarksIdToBookmarks(storedBookmarksId)
-        setBookmarks(savedBookmarks)
-    }, [])
+        const savedBlogs = storedIdToBlog(storedId, blogs)
+        setBookmarks(savedBlogs)
+    }, [blogs])
     
 
     // this will handle bookmarks after clicking to bookmark icon
-    const handleaddToBookmark = (blog) => {
+    const handleaddToBookmark = blog => {
         // console.log(blog.id)
         const dbItem = 'blog-bookmarks'
         addIdToDbItem(dbItem, blog.id)
-        const storedBookmarksId = getItemFromDb(dbItem)
+        const storedId = getItemFromDb(dbItem)
         
-        const savedBookmarks = storedBookmarksIdToBookmarks(storedBookmarksId)
-        setBookmarks(savedBookmarks)
+        const savedBlogs = storedIdToBlog(storedId, blogs)
+        setBookmarks(savedBlogs)
     }
+
+
+
 
     
 
@@ -70,12 +73,14 @@ const Blogs = () => {
                         blog = {blog}
                         key = {blog.id}
                         handleaddToBookmark = {handleaddToBookmark}
+                        // handleReadTime = {handleReadTime}
                         ></Blog>)
                 }
             </div>
             <Bookmarks
-                key = 'new'
+                key = {1}
                 bookmarks = {bookmarks}
+                // spentTime = {spentTime}
             ></Bookmarks>
         </div>
         

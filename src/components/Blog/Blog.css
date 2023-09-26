@@ -38,25 +38,19 @@
     justify-content: space-between;
 }
 
+.user-detail{
+    display: flex;
+    align-items: center;
+}
+
+
 
 .user-detail img{
     height: 40px;
     width: 40px;
     border: 1px solid grey;
     border-radius: 100%;
-}
-
-.user-detail{
-    display: flex;
-    align-items: center;
-}
-
-.user-detail div{
-    padding-left: 20px;
-}
-
-.user-detail h4{
-    margin-bottom: 1px;
+    margin-right: 20px;
 }
 
 
@@ -65,8 +59,13 @@
     align-items: center;
 }
 
+
 .blog-bookmark img{
     height: 15px;
     width: 15px;
     margin-left: 5px;
+}
+
+.blog-bookmark img:hover{
+    background-color: rgb(230, 227, 227);
 }

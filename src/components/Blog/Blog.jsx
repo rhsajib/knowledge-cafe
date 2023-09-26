@@ -14,14 +14,14 @@ const Blog = (props) => {
                 <div className='user-detail'>
                     <img src={user.img} alt="" />
                     <div>
-                        <text><strong>{user.name}</strong></text> 
+                        <strong>{user.name}</strong>
                         <br />
-                        <text><small>{published}</small></text>
+                        <small>{published}</small>
                     </div>
                 </div>
                 
                 <div className='blog-bookmark'>
-                    <text>{read} mins read</text>
+                    <span>{read} mins read</span>
                     <button onClick={() => {props.handleaddToBookmark(props.blog)}}><img src="bookmark.svg" alt="" /></button>
                 </div>               
             </div>
@@ -29,11 +29,11 @@ const Blog = (props) => {
 
             {
                 // tags.map(tag => <span><a href="">#{tag}  </a></span>)
-                tags.map(tag => <text>#{tag}  </text>)
+                tags.map(tag => <span>#{tag}  </span>)
             }
 
             <div>
-                <button>Mark as read</button>
+                <button onClick={() => {props.handleReadTime(props.blog)}}>Mark as read</button>
             </div>
         </div>
     );
